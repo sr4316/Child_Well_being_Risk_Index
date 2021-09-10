@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+plt.style.use('ggplot')
 
 
 def pca_plot(pca, labels=None,figsize=(20,20)):
@@ -8,12 +9,10 @@ def pca_plot(pca, labels=None,figsize=(20,20)):
     ax.set_ylim((-1.1, 1.1))
 
     circle = plt.Circle((0, 0), 1, color='black', linestyle='--', fill=False)
-    
-    ax.arrow(0, 0, components[0][0], components[0][1],
-          head_width=0.03, head_length=0.03,fc='r', ec='r' )
+
     plt.text(components[0,0]*  1.2, components[0,1] * 1.2, labels[0], ha = 'center', va = 'center',color='r')
 
-    for i in range(1,components.shape[0]):
+    for i in range(0 ,components.shape[0]):
         ax.arrow(0, 0, components[i][0], components[i][1],
                   head_width=0.03, head_length=0.03,fc='b', ec='b' )
         
