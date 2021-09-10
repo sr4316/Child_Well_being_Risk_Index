@@ -10,8 +10,6 @@ def pca_plot(pca, labels=None,figsize=(20,20)):
 
     circle = plt.Circle((0, 0), 1, color='black', linestyle='--', fill=False)
 
-    plt.text(components[0,0]*  1.2, components[0,1] * 1.2, labels[0], ha = 'center', va = 'center',color='r')
-
     for i in range(0 ,components.shape[0]):
         ax.arrow(0, 0, components[i][0], components[i][1],
                   head_width=0.03, head_length=0.03,fc='b', ec='b' )
