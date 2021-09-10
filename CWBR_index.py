@@ -4,6 +4,13 @@ from sklearn.decomposition import PCA
 import pandas as pd
 
 def make_index(df):
+
+    '''
+    This function performs Principal Components Analysis on the eight indicators that will compose our index. The number of principal components will be 2.
+    Taking df as an input, the function will return 1. pipe: all combined together, 2. PC_df: weights in principal component for each indicator,
+    3. X_proj: the projected data set, 4. Variance_df: percentages captured by each principal component.
+    and the 
+    '''
     X = df.dropna()
 
     pipe = Pipeline([
